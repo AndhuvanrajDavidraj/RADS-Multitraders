@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RADS Multitraders | Best Price Best Quality</title>
+  <meta name="description" content="Arjuna Milk, Campa Energy, Campa Sure Water & Chennai Rice – Available All Over Tamil Nadu. Retail & Bulk Orders." />
+  <link rel="icon" type="image/png" href="RADS Multitrade.png" />
+  <style>
+    body {margin:0;font-family:Arial,Helvetica,sans-serif;color:#222;}
+    .hero {background:#0b2d5c;color:#fff;padding:60px 20px;text-align:center;}
+    .hero h1 {font-size:36px;margin-bottom:10px;}
+    .hero p {font-size:18px;margin-bottom:20px;}
+    .badge {font-weight:bold;color:#ffd700;}
+    .btn {display:inline-block;margin:10px;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:bold;}
+    .btn-whatsapp {background:#25D366;color:#fff;}
+    .btn-call {background:#007BFF;color:#fff;}
+    .strip {background:#f1f5fb;text-align:center;padding:20px;font-weight:bold;}
+    .section {padding:40px 20px;max-width:1100px;margin:auto;}
+    .brands, .products, .features {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+    .card {border:1px solid #ddd;border-radius:10px;padding:20px;text-align:center;}
+    .card h3 {margin-top:10px;}
+    .card.selected {border:3px solid #007BFF;box-shadow:0 0 15px rgba(0,123,255,.5);}
+    .breadcrumb{font-size:14px;margin-bottom:15px;color:#555;text-align:center;}
+    .cta {background:#0b2d5c;color:#fff;text-align:center;padding:40px 20px;}
+    footer {background:#111;color:#fff;padding:20px;text-align:center;font-size:14px;}
+    .tn-badge{position:fixed;right:16px;bottom:90px;background:#ffd700;color:#0b2d5c;padding:10px 14px;border-radius:999px;font-weight:bold;box-shadow:0 6px 18px rgba(0,0,0,.2);z-index:999;}
+    @media(max-width:600px){.tn-badge{right:10px;bottom:80px;font-size:14px;}}
+      .fade-in{animation:fadeIn .4s ease-in-out}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .sticky-cart{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#007BFF;color:#fff;padding:12px 18px;border-radius:30px;font-weight:bold;display:none;z-index:1000;}
+    @media(min-width:768px){.sticky-cart{display:none!important}}
+  </style>
+</head>
+<body>
+<!-- ADMIN TOGGLE BUTTON -->
+<button onclick="openAdmin()" style="position:fixed;top:20px;right:20px;z-index:2000;background:#111;color:#fff;padding:10px 14px;border-radius:6px;">🔐 Admin</button>
+  <div class="tn-badge">🚚 All Over Tamil Nadu Delivery</div>
+
+  <!-- HERO -->
+  <!-- HEADER -->
+<header style="display:flex;align-items:center;justify-content:space-between;padding:15px 20px;background:#0b2d5c;color:#fff;">
+  <div style="display:flex;align-items:center;gap:15px;">
+    <img src="RADS Multitrade.png" alt="RADS Multitraders Logo" style="height:70px;width:auto;" />
+    <strong style="font-size:22px;">RADS Multitraders</strong>
+  </div>
+  <div>
+    <a class="btn btn-whatsapp" href="https://wa.me/919080021518" target="_blank">WhatsApp</a>
+    <a class="btn btn-call" href="tel:9080021518">Call</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:30px;">
+  <h1>Trusted Daily Essentials</h1>
+  <p>Arjuna Milk 🥛 | Campa Energy ⚡ | Campa Sure Water 💧 | Chennai Rice 🍚</p>
+  <p class="badge">Best Price | Best Quality</p>
+</section>
+
+  <!-- SERVICE AREA -->
+  <div class="strip">📍 Available All Over Tamil Nadu – Doorstep Delivery</div>
+
+  <!-- BRANDS (CLICK TO VIEW PRODUCTS) -->
+  <section class="section">
+    <h2 style="text-align:center">Select a Brand</h2>
+    <div style="text-align:center;margin-bottom:15px;">
+      <button class="btn btn-call" onclick="showAllBrands()">Show All Products</button>
+    </div>
+    <div class="brands">
+      <p style="grid-column:1/-1;text-align:center;color:#0b2d5c;font-weight:bold;">🎁 Brand Offers Applied Automatically</p>
+      <div class="card" onclick="showBrand('arjuna',this)" style="cursor:pointer;">
+        <img src="arjuna-milk-products.png" alt="Arjuna Milk" style="width:120px;max-width:100%;" />
+        <h3>Arjuna Milk</h3>
+      </div>
+      <div class="card" onclick="showBrand('campa-energy',this)" style="cursor:pointer;">
+        <img src="campa-energy.png" alt="Campa Energy" style="width:120px;max-width:100%;" />
+        <h3>Campa Energy</h3>
+      </div>
+      <div class="card" onclick="showBrand('campa-water',this)" style="cursor:pointer;">
+        <img src="campa-sure-water.png" alt="Campa Sure Water" style="width:120px;max-width:100%;" />
+        <h3>Campa Sure Water</h3>
+      </div>
+      <div class="card" onclick="showBrand('chennai-rice',this)" style="cursor:pointer;">
+        <img src="chennai-rice.png" alt="Chennai Rice" style="width:120px;max-width:100%;" />
+        <h3>Chennai Rice</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+<!-- PRODUCTS WITH CART -->
+<!-- CHENNAI RICE (UPDATED AS PER LATEST LIST) -->
+<div class="card chennai-rice brand-product" style="display:none;">
+  <h3 style="text-align:left">🍚 Chennai Rice</h3>
+  <p style="font-size:14px;color:#555;">Select Rice Brand</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;">
+    <button class="btn btn-call" onclick="routeCategory('chennai-rice','ponni-selvan')">Ponnivin Selvan</button>
+    <button class="btn btn-call" onclick="routeCategory('chennai-rice','bahubali')">Bahubali</button>
+    <button class="btn btn-call" onclick="routeCategory('chennai-rice','kalki')">Kalki</button>
+    <button class="btn btn-call" onclick="routeCategory('chennai-rice','idli')">Idli Rice</button>
+  </div>
+</div>
+
+<!-- PONNIVIN SELVAN -->
+<div class="card chennai-rice category chennai-rice-ponni-selvan" style="display:none;">
+  <h3>🍚 Ponnivin Selvan</h3>
+  <div class="card"><h4>26 KG Bag</h4><input type="number" min="1" value="1" id="ps-26" /><button class="btn btn-call" onclick="addToCart('Ponnivin Selvan 26KG',ps26.value,'Bag',0)">Add to Cart</button></div>
+  <div class="card"><h4>10 KG Bag</h4><input type="number" min="1" value="1" id="ps-10" /><button class="btn btn-call" onclick="addToCart('Ponnivin Selvan 10KG',ps10.value,'Bag',0)">Add to Cart</button></div>
+  <div class="card"><h4>5 KG Bag</h4><input type="number" min="1" value="1" id="ps-5" /><button class="btn btn-call" onclick="addToCart('Ponnivin Selvan 5KG',ps5.value,'Bag',0)">Add to Cart</button></div>
+</div>
+
+<!-- BAHUBALI -->
+<div class="card chennai-rice category chennai-rice-bahubali" style="display:none;">
+  <h3>🍚 Bahubali</h3>
+  <div class="card"><h4>26 KG Bag</h4><input type="number" min="1" value="1" id="bb-26" /><button class="btn btn-call" onclick="addToCart('Bahubali 26KG',bb26.value,'Bag',0)">Add to Cart</button></div>
+  <div class="card"><h4>10 KG Bag</h4><input type="number" min="1" value="1" id="bb-10" /><button class="btn btn-call" onclick="addToCart('Bahubali 10KG',bb10.value,'Bag',0)">Add to Cart</button></div>
+  <div class="card"><h4>5 KG Bag</h4><input type="number" min="1" value="1" id="bb-5" /><button class="btn btn-call" onclick="addToCart('Bahubali 5KG',bb5.value,'Bag',0)">Add to Cart</button></div>
+</div>
+
+<!-- KALKI -->
+<div class="card chennai-rice category chennai-rice-kalki" style="display:none;">
+  <h3>🍚 Kalki</h3>
+  <div class="card"><h4>26 KG Bag</h4><input type="number" min="1" value="1" id="kk-26" /><button class="btn btn-call" onclick="addToCart('Kalki 26KG',kk26.value,'Bag',0)">Add to Cart</button></div>
+  <div class="card"><h4>10 KG Bag</h4><input type="number" min="1" value="1" id="kk-10" /><button class="btn btn-call" onclick="addToCart('Kalki 10KG',kk10.value,'Bag',0)">Add to Cart</button></div>
+  <div class="card"><h4>5 KG Bag</h4><input type="number" min="1" value="1" id="kk-5" /><button class="btn btn-call" onclick="addToCart('Kalki 5KG',kk5.value,'Bag',0)">Add to Cart</button></div>
+</div>
+
+<!-- IDLI RICE -->
+<div class="card chennai-rice category chennai-rice-idli" style="display:none;">
+  <h3>🍚 Idli Rice</h3>
+  <div class="card"><h4>26 KG Bag</h4><input type="number" min="1" value="1" id="ir-26" /><button class="btn btn-call" onclick="addToCart('Idli Rice 26KG',ir26.value,'Bag',0)">Add to Cart</button></div>
+  <div class="card"><h4>10 KG Bag</h4><input type="number" min="1" value="1" id="ir-10" /><button class="btn btn-call" onclick="addToCart('Idli Rice 10KG',ir10.value,'Bag',0)">Add to Cart</button></div>
+  <div class="card"><h4>5 KG Bag</h4><input type="number" min="1" value="1" id="ir-5" /><button class="btn btn-call" onclick="addToCart('Idli Rice 5KG',ir5.value,'Bag',0)">Add to Cart</button></div>
+</div>
+
+<!-- CAMPA ENERGY -->
+<div class="card campa-energy brand-product" style="display:none;">
+  <h3 style="text-align:left">⚡ Campa Energy</h3>
+  <p style="font-size:14px;color:#555;">Select Variant</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;">
+    <button class="btn btn-call" onclick="routeCategory('campa-energy','energy')">View Products</button>
+  </div>
+</div>
+
+<div class="card campa-energy category campa-energy-energy" style="display:none;">
+  <h3>⚡ Campa Energy</h3>
+
+  <div class="card" style="margin-top:10px;">
+    <h4>Campa Energy – 250 ml Can</h4>
+    <p>Pack: 250 ml | Case: 24 cans</p>
+    <label>Cases:</label>
+    <input type="number" min="1" value="1" id="qty-energy-250" />
+    <button class="btn btn-call" onclick="addToCart('Campa Energy 250ml (24 cans)', document.getElementById('qty-energy-250').value, 'Case', prices.campa)">Add to Cart</button>
+  </div>
+
+  <div class="card" style="margin-top:10px;">
+    <h4>Campa Purple Energy – 250 ml Can</h4>
+    <p>Pack: 250 ml | Case: 24 cans</p>
+    <label>Cases:</label>
+    <input type="number" min="1" value="1" id="qty-energy-purple" />
+    <button class="btn btn-call" onclick="addToCart('Campa Purple Energy 250ml (24 cans)', document.getElementById('qty-energy-purple').value, 'Case', prices.campa)">Add to Cart</button>
+  </div>
+</div>
+
+<!-- CAMPa SURE WATER (DEDUPLICATED FROM MASTER LIST) -->
+<div class="card campa-water brand-product" style="display:none;">
+  <h3 style="text-align:left">💧 Campa Sure Water</h3>
+  <p style="font-size:14px;color:#555;">Select Pack Size</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;">
+    <button class="btn btn-call" onclick="routeCategory('campa','water')">View Products</button>
+  </div>
+</div>
+
+<div class="card campa category campa-water" style="display:none;">
+  <h3>💧 Campa Sure Water</h3>
+
+  <div class="card" style="margin-top:10px;">
+    <h4>250 ml (24 Bottles / Case)</h4>
+    <p>Pack: 250 ml | Case: 24 bottles</p>
+    <label>Cases:</label>
+    <input type="number" min="1" value="1" id="qty-water-250" />
+    <button class="btn btn-call" onclick="addToCart('Campa Sure Water 250ml (24 bottles)', document.getElementById('qty-water-250').value, 'Case', 0)">Add to Cart</button>
+  </div>
+
+  <div class="card" style="margin-top:10px;">
+    <h4>500 ml (24 Bottles / Case)</h4>
+    <p>Pack: 500 ml | Case: 24 bottles</p>
+    <label>Cases:</label>
+    <input type="number" min="1" value="1" id="qty-water-500" />
+    <button class="btn btn-call" onclick="addToCart('Campa Sure Water 500ml (24 bottles)', document.getElementById('qty-water-500').value, 'Case', 0)">Add to Cart</button>
+  </div>
+
+  <div class="card" style="margin-top:10px;">
+    <h4>1 Litre (12 Bottles / Case)</h4>
+    <p>Pack: 1 L | Case: 12 bottles</p>
+    <label>Cases:</label>
+    <input type="number" min="1" value="1" id="qty-water-1l" />
+    <button class="btn btn-call" onclick="addToCart('Campa Sure Water 1L (12 bottles)', document.getElementById('qty-water-1l').value, 'Case', 0)">Add to Cart</button>
+  </div>
+
+  <div class="card" style="margin-top:10px;">
+    <h4>2 Litre (9 Bottles / Case)</h4>
+    <p>Pack: 2 L | Case: 9 bottles</p>
+    <label>Cases:</label>
+    <input type="number" min="1" value="1" id="qty-water-2l" />
+    <button class="btn btn-call" onclick="addToCart('Campa Sure Water 2L (9 bottles)', document.getElementById('qty-water-2l').value, 'Case', 0)">Add to Cart</button>
+  </div>
+</div>
+<section class="section">
+  <div class="breadcrumb" id="breadcrumb">Home</div>
+  <h2 style="text-align:center">Products – Add to Cart</h2>
+  <div class="products fade-in" style="display:none;" id="productSection">
+    <div class="card arjuna brand-product">
+  <h3 style="text-align:left">🥛 Arjuna Milk</h3>
+  <p style="font-size:14px;color:#555;">Select a category</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-start;">
+    <button class="btn btn-call" onclick="routeCategory('arjuna','milk')">Milk</button>
+    <button class="btn btn-call" onclick="routeCategory('arjuna','curd')">Curd</button>
+    <button class="btn btn-call" onclick="routeCategory('arjuna','paneer')">Paneer</button>
+    <button class="btn btn-call" onclick="routeCategory('arjuna','butter')">Butter</button>
+    <button class="btn btn-call" onclick="routeCategory('arjuna','ghee')">Ghee</button>
+    <button class="btn btn-call" onclick="routeCategory('arjuna','flavoured')">Flavoured Milk</button>
+    <button class="btn btn-call" onclick="routeCategory('arjuna','powder')">Milk Powder</button>
+  </div>
+</div>
+
+<div class="card arjuna category arjuna-milk" style="display:none;">
+  <h3>🥛 Arjuna – Milk</h3>
+  <div class="card" style="margin-top:10px;">
+    <h4>Toned Milk</h4>
+    <p>₹<span>60</span> / Litre</p>
+    <label>Qty:</label>
+    <input type="number" min="1" value="1" id="qty-arjuna-toned" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Milk - Toned', document.getElementById('qty-arjuna-toned').value, 'L', prices.arjuna)">Add to Cart</button>
+  </div>
+  <div class="card" style="margin-top:10px;">
+    <h4>Standardised Milk</h4>
+    <p>₹<span>60</span> / Litre</p>
+    <label>Qty:</label>
+    <input type="number" min="1" value="1" id="qty-arjuna-std" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Milk - Standardised', document.getElementById('qty-arjuna-std').value, 'L', prices.arjuna)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card arjuna category arjuna-curd" style="display:none;">
+  <h3>🥣 Arjuna – Curd</h3>
+  <div class="card" style="margin-top:10px;">
+    <h4>Toned Milk Curd</h4>
+    <p>₹60 / Kg</p>
+    <label>Qty:</label>
+    <input type="number" min="1" value="1" id="qty-arjuna-curd1" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Curd - Toned', document.getElementById('qty-arjuna-curd1').value, 'Kg', prices.arjuna)">Add to Cart</button>
+  </div>
+  <div class="card" style="margin-top:10px;">
+    <h4>Double Toned Curd</h4>
+    <p>₹60 / Kg</p>
+    <label>Qty:</label>
+    <input type="number" min="1" value="1" id="qty-arjuna-curd2" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Curd - Double Toned', document.getElementById('qty-arjuna-curd2').value, 'Kg', prices.arjuna)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card arjuna category arjuna-paneer" style="display:none;">
+  <h3>🧀 Arjuna – Paneer</h3>
+  <div class="card" style="margin-top:10px;">
+    <h4>Fresh Paneer</h4>
+    <p>₹400 / Kg</p>
+    <label>Qty:</label>
+    <input type="number" min="0.25" step="0.25" value="0.25" id="qty-arjuna-paneer1" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Paneer - Fresh', document.getElementById('qty-arjuna-paneer1').value, 'Kg', 400)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card arjuna category arjuna-butter" style="display:none;">
+  <h3>🧈 Arjuna – Butter</h3>
+  <div class="card" style="margin-top:10px;">
+    <h4>Cooking Butter</h4>
+    <p>₹520 / Kg</p>
+    <label>Qty:</label>
+    <input type="number" min="0.25" step="0.25" value="0.25" id="qty-arjuna-butter1" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Butter - Cooking', document.getElementById('qty-arjuna-butter1').value, 'Kg', 520)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card arjuna category arjuna-ghee" style="display:none;">
+  <h3>🥘 Arjuna – Ghee</h3>
+  <div class="card" style="margin-top:10px;">
+    <h4>Pure Cow Ghee</h4>
+    <p>₹650 / Litre</p>
+    <label>Qty:</label>
+    <input type="number" min="0.5" step="0.5" value="0.5" id="qty-arjuna-ghee" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Ghee', document.getElementById('qty-arjuna-ghee').value, 'L', 650)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card arjuna category arjuna-flavoured" style="display:none;">
+  <h3>🥛 Arjuna – Flavoured Milk</h3>
+  <div class="card" style="margin-top:10px;">
+    <h4>Badam / Chocolate / Rose</h4>
+    <p>₹30 / Bottle</p>
+    <label>Qty:</label>
+    <input type="number" min="1" value="1" id="qty-arjuna-flavour" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Flavoured Milk', document.getElementById('qty-arjuna-flavour').value, 'Bottle', 30)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="card arjuna category arjuna-powder" style="display:none;">
+  <h3>🥛 Arjuna – Milk Powder</h3>
+  <div class="card" style="margin-top:10px;">
+    <h4>Whole Milk Powder</h4>
+    <p>₹480 / Kg</p>
+    <label>Qty:</label>
+    <input type="number" min="1" value="1" id="qty-arjuna-powder" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Milk Powder', document.getElementById('qty-arjuna-powder').value, 'Kg', 480)">Add to Cart</button>
+  </div>
+</div>
+  <div class="card" style="margin-top:10px;">
+    <h4>Double Toned Curd</h4>
+    <p>₹<span>60</span> / Kg</p>
+    <label>Qty:</label>
+    <input type="number" min="1" value="1" id="qty-arjuna-curd2" />
+    <button class="btn btn-call" onclick="addToCart('Arjuna Curd - Double Toned', document.getElementById('qty-arjuna-curd2').value, 'Kg', prices.arjuna)">Add to Cart</button>
+  </div>
+</div>
+
+  <div style="margin-top:30px;text-align:center;" class="fade-in">
+    <h3>🛒 Cart</h3><p><strong>Total: ₹<span id="total">0</span></strong></p>
+    <ul id="cart"></ul>
+    <a href="#checkout" class="btn btn-call">Proceed to Checkout</a>
+    <p style="margin-top:10px;font-size:13px;">* Prices are indicative. Final billing as per GST rules.</p>
+  </div>
+</section>
+
+<script>
+/* ================= CORE DATA ================= */
+const cart = [];
+const orders = [];
+const MIN_ORDER = 500;
+let total = 0;
+
+const stockStatus = {
+  'Arjuna Milk': true,
+  'Campa Energy': true,
+  'Campa Sure Water': true,
+  'Chennai Rice': true
+};
+
+// MASTER PRICE TABLE (ADMIN CONTROLLED PER LINE ITEM)
+let priceTable = JSON.parse(localStorage.getItem('priceTable')) || {
+  // Arjuna Milk
+  'Arjuna Milk - Toned': 60,
+  'Arjuna Milk - Standardised': 60,
+  'Arjuna Curd - Toned': 60,
+  'Arjuna Curd - Double Toned': 60,
+  'Arjuna Paneer - Fresh': 400,
+  'Arjuna Butter - Cooking': 520,
+  'Arjuna Ghee': 650,
+  'Arjuna Flavoured Milk': 30,
+  'Arjuna Milk Powder': 480,
+
+  // Campa Energy
+  'Campa Energy 250ml (24 cans)': 0,
+  'Campa Purple Energy 250ml (24 cans)': 0,
+
+  // Campa Sure Water
+  'Campa Sure Water 250ml (24 bottles)': 0,
+  'Campa Sure Water 500ml (24 bottles)': 0,
+  'Campa Sure Water 1L (12 bottles)': 0,
+  'Campa Sure Water 2L (9 bottles)': 0,
+
+  // Chennai Rice
+  'Ponnivin Selvan 26KG': 0,
+  'Ponnivin Selvan 10KG': 0,
+  'Ponnivin Selvan 5KG': 0,
+  'Bahubali 26KG': 0,
+  'Bahubali 10KG': 0,
+  'Bahubali 5KG': 0,
+  'Kalki 26KG': 0,
+  'Kalki 10KG': 0,
+  'Kalki 5KG': 0,
+  'Idli Rice 26KG': 0,
+  'Idli Rice 10KG': 0,
+  'Idli Rice 5KG': 0
+};
+
+/* ================= CART ================= */
+function addToCart(product, qty, unit){
+  const q = Number(qty);
+  if(!q || q<=0) return alert('Invalid quantity');
+  const price = priceTable[product] ?? 0;
+  const itemTotal = q * price;
+  total += itemTotal;
+  cart.push(`${product} - ${q} ${unit} (₹${itemTotal})`);
+  renderCart();
+  updateSticky();
+}
+
+function renderCart(){
+  const el = document.getElementById('cart');
+  el.innerHTML = '';
+  cart.forEach(i=>{ const li=document.createElement('li'); li.textContent=i; el.appendChild(li); });
+  document.getElementById('total').innerText = total;
+}
+
+/* ================= BRAND / CATEGORY ================= */
+function showBrand(brand, el){
+  document.getElementById('productSection').style.display='grid';
+  document.getElementById('breadcrumb').innerText='Home / '+brand.replace('-',' ').toUpperCase();
+  document.querySelectorAll('.brands .card').forEach(c=>c.classList.remove('selected'));
+  if(el) el.classList.add('selected');
+  document.querySelectorAll('.brand-product').forEach(p=>p.style.display='none');
+  document.querySelectorAll('.'+brand).forEach(p=>p.style.display='block');
+  document.querySelectorAll('.category').forEach(c=>c.style.display='none');
+  document.querySelector('.products').scrollIntoView({behavior:'smooth'});
+}
+
+function routeCategory(brand, category){
+  history.pushState({},'',`?brand=${brand}&category=${category}`);
+  document.querySelectorAll('.category').forEach(c=>c.style.display='none');
+  const el = document.querySelector(`.${brand}-${category}`);
+  if(el) el.style.display='block';
+  document.getElementById('breadcrumb').innerText=`Home / ${brand.toUpperCase()} / ${category.toUpperCase()}`;
+}
+
+function showAllBrands(){
+  document.getElementById('breadcrumb').innerText='Home / All Products';
+  document.getElementById('productSection').style.display='grid';
+  document.querySelectorAll('.brand-product').forEach(el=>el.style.display='block');
+  document.querySelectorAll('.category').forEach(c=>c.style.display='none');
+  document.querySelectorAll('.brands .card').forEach(el=>el.classList.remove('selected'));
+}
+
+/* ================= CHECKOUT ================= */
+function finalCheckout(){
+  if(total < MIN_ORDER){ alert('Minimum order value ₹'+MIN_ORDER); return; }
+
+  // BRAND-WISE GROUPING
+  const groups = {};
+  cart.forEach(item=>{
+    let brand = 'Other';
+    if(item.startsWith('Arjuna')) brand = 'Arjuna Milk';
+    else if(item.startsWith('Campa Energy')) brand = 'Campa Energy';
+    else if(item.startsWith('Campa Sure Water')) brand = 'Campa Sure Water';
+    else if(item.includes('Selvan') || item.includes('Bahubali') || item.includes('Kalki') || item.includes('Idli Rice')) brand = 'Chennai Rice';
+    if(!groups[brand]) groups[brand] = [];
+    groups[brand].push(item);
+  });
+
+  let summary = '';
+  Object.keys(groups).forEach(b=>{
+    summary += `
+${b}:`;
+    groups[b].forEach(i=> summary += `
+- ${i}`);
+    summary += '
+';
+  });
+
+  const name = document.getElementById('cust-name').value;
+  const loc  = document.getElementById('cust-location').value;
+  const mob  = document.getElementById('cust-mobile').value;
+
+  const msg = 'Order Request:%0A'+encodeURIComponent(summary)+'%0A%0ATotal: ₹'+total+'%0AName: '+name+'%0ALocation: '+loc+'%0AMobile: '+mob+'%0A%0ANote: GST Invoice will be provided';
+  window.open('https://wa.me/919080021518?text='+msg,'_blank');
+}('https://wa.me/919080021518?text='+msg,'_blank');
+}
+</script>
+
+<!-- CHECKOUT PAGE -->
+<section id="checkout" class="section" style="background:#f9f9f9;">
+  <h2 style="text-align:center">Checkout</h2>
+  <p style="text-align:center;color:green;font-weight:bold;">✔ Secure Order • GST Invoice Available</p>
+  <p style="text-align:center">Please review your order and place it via WhatsApp.</p>
+
+  <div style="max-width:500px;margin:20px auto;">
+    <h3>🧾 Your Order</h3>
+    <ul id="checkout-cart"></ul>
+
+    <h3>📋 Customer Details</h3>
+    <label>Name</label><br />
+    <input type="text" id="cust-name" style="width:100%;padding:8px;margin-bottom:10px;" />
+
+    <label>Location (City/District)</label><br />
+    <input type="text" id="cust-location" style="width:100%;padding:8px;margin-bottom:10px;" />
+
+    <label>Mobile Number</label><br />
+    <input type="tel" id="cust-mobile" style="width:100%;padding:8px;margin-bottom:20px;" />
+
+    <button class="btn btn-whatsapp" onclick="finalCheckout()">Place Order via WhatsApp</button>
+    <button class="btn btn-call" onclick="downloadInvoice()">📄 Download Invoice (PDF)</button>
+    <a class="btn btn-call" href="upi://pay?pa=yourupi@bank&pn=RADS%20Multitraders&am=" target="_blank">Pay via UPI</a>
+  </div>
+</section>
+
+<script>
+// sync cart to checkout
+const checkoutEl = document.getElementById('checkout-cart');
+const observer = new MutationObserver(() => {
+  checkoutEl.innerHTML = document.getElementById('cart').innerHTML;
+});
+observer.observe(document.getElementById('cart'), { childList: true });
+</script>
+
+  <!-- TAMIL NADU MAP -->
+  <section class="section" style="text-align:center;">
+    <h2>Our Delivery Coverage</h2>
+    <p><strong>Available All Over Tamil Nadu</strong></p>
+    <img src="tamilnadu-map.png" alt="Tamil Nadu Delivery Map" style="max-width:500px;width:100%;margin:20px auto;" />
+    <p>Fast & reliable delivery across all districts of Tamil Nadu.</p>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <h2 style="text-align:center">Why Choose RADS Multitraders</h2>
+    <div class="features">
+      <div class="card">⭐ Best Price</div>
+      <div class="card">🏆 Best Quality</div>
+      <div class="card">🚚 All Tamil Nadu Delivery</div>
+      <div class="card">🤝 Trusted Brands</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Retailers & Bulk Orders Welcome</h2>
+    <p>Grocery • Supermarket • Hotel • Catering • Events</p>
+    <p><strong>📞 Call / WhatsApp: 9080021518</strong></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="RADS Multitrade.png" alt="RADS Multitraders Logo" style="max-width:80px;margin-bottom:10px;" />
+    <p><strong>RADS Multitraders</strong></p>
+    <p>Best Price | Best Quality</p>
+    
+    <p>© RADS Multitraders</p>
+  </footer>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:3000;">
+  <div style="background:#fff;max-width:420px;margin:5% auto;padding:20px;border-radius:10px;">
+    <h2>🔐 Admin Control Panel</h2>
+    <div id="adminLogin">
+      <label>Admin Password</label><br/>
+      <input type="password" id="adminPass" style="width:100%;padding:8px;" />
+      <button class="btn btn-call" onclick="loginAdmin()">Login</button>
+    </div>
+    <div id="adminControls" style="display:none;">
+    <p style="font-size:14px;color:#555;">Simple controls (local device only)</p>
+
+    <h3>Stock Control</h3>
+    <button onclick="toggleStock('Arjuna Milk')">Toggle Arjuna Milk</button><br/><br/>
+    <button onclick="toggleStock('Campa Energy')">Toggle Campa Energy</button><br/><br/>
+    <button onclick="toggleStock('Campa Sure Water')">Toggle Campa Sure Water</button><br/><br/>
+    <button onclick="toggleStock('Chennai Rice')">Toggle Chennai Rice</button><br/><br/>
+
+    <h3>Price Control (Line Items)</h3>
+<p style="font-size:13px;color:#666">Edit price per product. Saved locally.</p>
+<div id="priceTableUI" style="max-height:300px;overflow:auto;border:1px solid #ddd;padding:10px;margin-bottom:10px;"></div>
+<button class="btn btn-call" onclick="savePriceTable()">💾 Save All Prices</button>
+<script>
+function renderPriceTable(){
+  const box=document.getElementById('priceTableUI');
+  box.innerHTML='';
+  Object.keys(priceTable).forEach(key=>{
+    const row=document.createElement('div');
+    row.style.display='flex';
+    row.style.justifyContent='space-between';
+    row.style.gap='10px';
+    row.style.marginBottom='6px';
+    row.innerHTML=`<span style="flex:1;font-size:13px;">${key}</span><input type="number" style="width:90px" value="${priceTable[key]}" data-key="${key}" />`;
+    box.appendChild(row);
+  });
+}
+function savePriceTable(){
+  document.querySelectorAll('#priceTableUI input').forEach(inp=>{
+    priceTable[inp.dataset.key]=Number(inp.value)||0;
+  });
+  localStorage.setItem('priceTable',JSON.stringify(priceTable));
+  alert('Prices saved successfully');
+}
+</script>()">Save Prices</button><br/><br/>
+
+    <h3>Order History</h3>
+    <ul id="orderHistory"></ul><br/>
+
+        <button onclick="closeAdmin()" style="background:#d9534f;color:#fff;padding:8px 12px;border:none;border-radius:6px;">Close Admin</button>
+    </div> style="background:#d9534f;color:#fff;padding:8px 12px;border:none;border-radius:6px;">Close Admin</button>
+  </div>
+</div>
+
+<!-- PRODUCT POPUP -->
+<div id="popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:9999;" onclick="closePopup()">
+  <div style="background:#fff;max-width:400px;margin:10% auto;padding:20px;text-align:center;" onclick="event.stopPropagation()">
+    <img id="popup-img" style="width:100%;" />
+    <h3 id="popup-title"></h3>
+    <button class="btn btn-call" onclick="closePopup()">Close</button>
+  </div>
+</div>
+<script>
+  function openAdmin(){document.getElementById('adminPanel').style.display='block';}
+  function closeAdmin(){document.getElementById('adminPanel').style.display='none';}
+
+  function openPopup(img,title){
+    document.getElementById('popup-img').src=img;
+    document.getElementById('popup-title').innerText=title;
+    document.getElementById('popup').style.display='block';
+  }
+  function closePopup(){document.getElementById('popup').style.display='none';}
+</script>
+<a href="#checkout" class="sticky-cart" id="stickyCart">🛒 View Cart (₹<span id="stickyTotal">0</span>)</a>
+<script>
+  function updateSticky(){
+    const btn=document.getElementById('stickyCart');
+    const t=document.getElementById('total').innerText;
+    document.getElementById('stickyTotal').innerText=t;
+    if(parseInt(t)>0){btn.style.display='block'}
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  function downloadInvoice(){
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    doc.setFontSize(16);
+    doc.text('RADS Multitraders - Invoice', 14, 20);
+    doc.setFontSize(11);
+    doc.text('GST Invoice Available', 14, 28);
+
+    let y = 40;
+    cart.forEach(item=>{ doc.text(item, 14, y); y+=8; });
+    y+=5;
+    doc.text('Total: ₹'+total, 14, y);
+
+    y+=10;
+    doc.text('Customer: '+document.getElementById('cust-name').value, 14, y);
+    y+=7;
+    doc.text('Location: '+document.getElementById('cust-location').value, 14, y);
+    y+=7;
+    doc.text('Mobile: '+document.getElementById('cust-mobile').value, 14, y);
+
+    doc.save('RADS_Invoice.pdf');
+  }
+</script>
+</body>
+</html>
